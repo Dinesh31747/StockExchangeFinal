@@ -1,0 +1,11 @@
+.about-container {
+    padding: 50px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .about-intro,
+  .about-mission {
+    margin-bottom: 50px;
+  }
+  

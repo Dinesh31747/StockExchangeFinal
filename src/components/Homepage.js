@@ -16,6 +16,10 @@ import Player from 'react-player';
 function Homepage() {
   const videoUrl = 'https://youtu.be/kPmXyafzfaU'; // Replace with your video URL
   const quote = "The stock market is a device for transferring money from the impatient to the patient. - Warren Buffett";
+  const handleExploreToolsClick = () => {
+    alert('Login To View'); // Display alert message
+  };
+
 
   return (
     <div>
@@ -38,9 +42,11 @@ function Homepage() {
                   {quote}
                 </Typography>
                 <Box sx={{ display: 'flex', justifyContent: 'center', marginTop: 'auto' }}>
+                <Link href="/learnmore" underline="none">
                   <Button variant="contained" sx={{ marginRight: 1 }}>
                     Learn More
                   </Button>
+                  </Link>
                   <Link href="/Register" underline="none">
                     <Button variant="outlined">Sign Up</Button>
                   </Link>
@@ -58,8 +64,8 @@ function Homepage() {
             <Typography variant="body1" component="p">
               Keep up with the latest market trends and insights with our educational resources.
             </Typography>
-            <Link href="/stocks" underline="none">
-              <Button variant="text">Explore Resources</Button>
+            <Link href="/StockExchangeFinal" underline="none">
+              <Button variant="text"  onClick={handleExploreToolsClick}>Explore Resources</Button>
             </Link>
           </Paper>
         </Grid>
@@ -78,8 +84,8 @@ function Homepage() {
             <Typography variant="body1" component="p">
               Access powerful tools and analytics to help you make informed investment choices.
             </Typography>
-            <Link href="/trade" underline="none">
-              <Button variant="text">Explore Tools</Button>
+            <Link href="/StockExchangeFinal" underline="none">
+              <Button variant="text" onClick={handleExploreToolsClick}>Explore Tools</Button>
             </Link>
           </Paper>
         </Grid>

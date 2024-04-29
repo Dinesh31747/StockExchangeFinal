@@ -11,6 +11,9 @@ import {
 import { Link } from 'react-router-dom';
 
 function NavBar() {
+  const handleExploreToolsClick = () => {
+    alert('Login To View'); // Display alert message
+  };
   return (
     <AppBar position="static" sx={{ backgroundColor: '#007bff' }}>
       <Toolbar disableGutters>
@@ -28,12 +31,12 @@ function NavBar() {
             </Button>
             </Box>
             <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
-            <Button variant="text" color="inherit" component={Link} to='/about' sx={{ marginRight: 2, color: 'white' }}>
+            <Button variant="text" color="inherit" onClick={handleExploreToolsClick} sx={{ marginRight: 2, color: 'white' }}>
               About
             </Button>
             </Box>
             <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
-            <Button variant="text" color="inherit" component={Link} to='/price'sx={{ color: 'white' }}>
+            <Button variant="text" color="inherit" onClick={handleExploreToolsClick} sx={{ color: 'white' }}>
               Pricing
             </Button>
             </Box>

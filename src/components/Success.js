@@ -7,7 +7,7 @@ function Success(props) {
   const navigate = useNavigate();
 
   const handleRedirect = () => {
-    navigate('/'); // Redirect to home page programmatically
+    navigate('/StockExchangeFinal'); // Redirect to home page programmatically
   };
   const { username } = useParams(); // Access username from URL params (if using useParams)
   const location = useLocation();

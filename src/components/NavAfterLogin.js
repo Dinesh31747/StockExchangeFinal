@@ -10,6 +10,7 @@ import {
 import { Link } from 'react-router-dom';
 
 function NavAfterLogin() {
+  
   return (
     <AppBar position="static" sx={{ backgroundColor: '#007bff' }}>
       <Toolbar disableGutters>

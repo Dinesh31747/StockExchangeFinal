@@ -22,7 +22,6 @@ export default function Stock() {
     localStorage.setItem('stock',JSON.stringify(data))
   },[items]);
 
-  }
 
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', backgroundColor: 'background.default' }}>

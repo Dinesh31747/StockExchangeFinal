@@ -19,6 +19,7 @@ import ChangePassword from './components/ChangePassword';
 import Success from './components/Success'
 import NavAfterLogin from './components/NavAfterLogin';
 import AfterHome from './components/AfterHome';
+import LearnMore from './components/LearnMore';
 
 
 /** root routes */
@@ -50,6 +51,10 @@ const router = createBrowserRouter([
     {
         path: '/stocks',
         element: <Stocks/>
+    },
+    {
+        path: '/learnmore',
+        element: <LearnMore/>
     },
     {
         path: '/about',

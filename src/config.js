@@ -1,4 +1,4 @@
 const config ={
-    url: 'http://localhost8000'
+    url: 'https://stockexchangebackend.onrender.com'
 };
 export default config;

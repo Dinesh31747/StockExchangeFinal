@@ -20,7 +20,9 @@ const Stocks = () => {
   });
   const [cart, setCart] = useState([]); // State to store selected stocks
   const [openSnackbar, setOpenSnackbar] = useState(false); // Snackbar state
-  const [totalStocks, setTotalStocks] = useState(0); // State to store total number of stocks in the cart
+
+  // Calculate totalStocks directly from cart state within the component
+  const totalStocks = cart.length;
 
   useEffect(() => {
     const storedStocks = localStorage.getItem('stock');
@@ -28,6 +30,9 @@ const Stocks = () => {
     if (storedStocks) {
       cartFromStorage = JSON.parse(storedStocks);
     }
+
+    // Update cart state based on localStorage
+    setCart(cartFromStorage);
 
     const intervalId = setInterval(fetchData, 10000); // Fetch every 10 seconds
 
@@ -46,26 +51,20 @@ const Stocks = () => {
 
     fetchData(); // Initial fetch
 
-    // Set total stocks based on the length of the cart from local storage
-    setTotalStocks(cartFromStorage.length);
-
     return () => clearInterval(intervalId); // Cleanup on unmount
   }, []);
 
   const handleAddToCart = (stock) => {
     const { ticker, price } = stock;
     const newStock = { ticker, price };
-    setCart([...cart, newStock]);
-    setOpenSnackbar(true);
 
-    // Retrieve and update cart from local storage
-    const storedStocks = localStorage.getItem('stock');
-    let cartFromStorage = [];
-    if (storedStocks) {
-      cartFromStorage = JSON.parse(storedStocks);
-    }
-    setCart([...cartFromStorage, newStock]);
-    localStorage.setItem('stock', JSON.stringify(cart));
+    // Update cart state directly (using spread operator)
+    setCart((prevCart) => [...prevCart, newStock]);
+
+    // Update cart data in localStorage
+    localStorage.setItem('stock', JSON.stringify([...cart, newStock]));
+
+    setOpenSnackbar(true);
   };
 
   const handleSnackbarClose = () => {
@@ -76,8 +75,8 @@ const Stocks = () => {
     const updatedCart = cart.filter((item) => item.ticker !== stock.ticker);
     setCart(updatedCart);
     localStorage.setItem('stock', JSON.stringify(updatedCart));
-    setTotalStocks(updatedCart.length); // Update total stocks after removal
   };
+
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', backgroundColor: 'background.default' }}>
       <AppBar position="static" color="primary">

@@ -3,8 +3,11 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 
 /** import all components */
-import Login from './components/Login';
-import Register from './components/Register';
+
+
+
+import Login from './components/LoginPage';
+import Register from './components/RegisterPage';
 import Homepage from './components/Homepage';
 import Stocks from './components/Stocks';
 
@@ -15,8 +18,6 @@ import Price from './components/Price';
 import About from './components/About';
 import TradePage from './components/TradingViewWidget';
 import Heatmap from './components/Heatmap';
-import ChangePassword from './components/ChangePassword';
-import Success from './components/Success'
 import NavAfterLogin from './components/NavAfterLogin';
 import AfterHome from './components/AfterHome';
 import LearnMore from './components/LearnMore';
@@ -31,10 +32,6 @@ const router = createBrowserRouter([
     {
         path:'/after',
         element:<AfterHome/>
-    },
-    {
-        path:'/Registersuccess',
-        element:<Success/>
     },
     {
         path:'/navafter',
@@ -70,11 +67,7 @@ const router = createBrowserRouter([
     },
     {
         path : '/register',
-        element : <Register></Register>
-    },
-    {
-        path : '/changepassword',
-        element : <ChangePassword />
+        element : <Register/>
     },
     {
         path : '/heatmap',

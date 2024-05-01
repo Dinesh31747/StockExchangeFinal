@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import { Button, TextField, Alert, Snackbar, Typography, Container, Box } from '@mui/material';
+import { Button, TextField, Alert, Snackbar, Typography, Box ,Grid,Paper} from '@mui/material';
 import { Link } from 'react-router-dom';
 import config from "../config";
+import Navbar from "./Navbar"
 
 
 const LoginPage = () => {
@@ -54,7 +55,8 @@ const LoginPage = () => {
   };
 
   return (
-    <Container component="main" maxWidth="xs" sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '100vh' }}>
+  <Grid container justifyContent="center" alignItems="center">
+  <Navbar/>
     <Grid item xs={12} md={6}>
     <Paper elevation={3} sx={{ p: 4, mt: 10}}>
       <Box sx={{ p: 4 }}>
@@ -124,7 +126,7 @@ const LoginPage = () => {
           {snackbarSeverity === 'success' ? 'Login Successful!' : 'Invalid login details.'}
         </Alert>
       </Snackbar>
-    </Container>
+      </Grid>
 
   );
 };

@@ -42,12 +42,12 @@ function Homepage() {
                   {quote}
                 </Typography>
                 <Box sx={{ display: 'flex', justifyContent: 'center', marginTop: 'auto' }}>
-                <Link to="/learnmore" underline="none">
+                <Link href="/learnmore" underline="none">
                   <Button variant="contained" sx={{ marginRight: 1 }}>
                     Learn More
                   </Button>
                   </Link>
-                  <Link to="/register" underline="none">
+                  <Link href="/register" underline="none">
                     <Button variant="outlined">Sign Up</Button>
                   </Link>
                 </Box>

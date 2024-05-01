@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 // Import MUI components
 import { Button, TextField, FormControlLabel, Checkbox, Grid, Typography, Box, Paper, Snackbar, Alert } from "@mui/material";
 import config from "../config";
+import Navbar from "./Navbar"
 
 function RegisterPage() {
   const navigate = useNavigate();
@@ -59,6 +60,7 @@ function RegisterPage() {
 
   return (
     <Grid container justifyContent="center" alignItems="center">
+      <Navbar/>
       <Grid item xs={12} md={6}>
         <Paper elevation={3} sx={{ p: 4, mt: 10}}>
           <Box sx={{ p: 4 }}>

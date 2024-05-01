@@ -84,7 +84,7 @@ function Homepage() {
             <Typography variant="body1" component="p">
               Access powerful tools and analytics to help you make informed investment choices.
             </Typography>
-            <Link href="/StockExchangeFinal" underline="none">
+            <Link href="/" underline="none">
               <Button variant="text" onClick={handleExploreToolsClick}>Explore Tools</Button>
             </Link>
           </Paper>

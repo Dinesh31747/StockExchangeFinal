@@ -65,11 +65,10 @@ function LearnMore() {
             </Box>
           </Paper>
         </Grid>
-        {/* Add more sections with additional content (FAQs, Tutorials etc.) */}
       </Grid>
       <Grid container justifyContent="center" sx={{ mt: 4 }}>
         <Grid item>
-        <Link href="/Register" underline="none">
+        <Link to="/register" underline="none">
           <Button variant="contained" color="primary">
             Sign Up Now
           </Button>

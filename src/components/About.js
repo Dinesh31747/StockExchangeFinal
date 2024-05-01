@@ -70,11 +70,6 @@ function About() {
       <Typography variant="body1" component="p">Optimizes team allocation and ensures project needs are met.</Typography>
     </CardContent>
   </Card>
-
-      {/* Team member cards go here */}
-      {/* <Grid item xs={12} sm={6} md={4}>
- 
-    </Grid> */}
   </div>
 </div>
 

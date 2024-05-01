@@ -42,12 +42,12 @@ function Homepage() {
                   {quote}
                 </Typography>
                 <Box sx={{ display: 'flex', justifyContent: 'center', marginTop: 'auto' }}>
-                <Link href="/learnmore" underline="none">
+                <Link to="/learnmore" underline="none">
                   <Button variant="contained" sx={{ marginRight: 1 }}>
                     Learn More
                   </Button>
                   </Link>
-                  <Link href="/register" underline="none">
+                  <Link to="/register" underline="none">
                     <Button variant="outlined">Sign Up</Button>
                   </Link>
                 </Box>
@@ -64,7 +64,7 @@ function Homepage() {
             <Typography variant="body1" component="p">
               Keep up with the latest market trends and insights with our educational resources.
             </Typography>
-            <Link href="/" underline="none">
+            <Link to="/" underline="none">
               <Button variant="text"  onClick={handleExploreToolsClick}>Explore Resources</Button>
             </Link>
           </Paper>
@@ -84,7 +84,7 @@ function Homepage() {
             <Typography variant="body1" component="p">
               Access powerful tools and analytics to help you make informed investment choices.
             </Typography>
-            <Link href="/" underline="none">
+            <Link to="/" underline="none">
               <Button variant="text" onClick={handleExploreToolsClick}>Explore Tools</Button>
             </Link>
           </Paper>

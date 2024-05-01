@@ -55,7 +55,10 @@ const LoginPage = () => {
 
   return (
     <Container component="main" maxWidth="xs" sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '100vh' }}>
-      <Typography variant="h2" component="h1" gutterBottom>
+    <Grid item xs={12} md={6}>
+    <Paper elevation={3} sx={{ p: 4, mt: 10}}>
+      <Box sx={{ p: 4 }}>
+        <Typography variant="h2" component="h1" gutterBottom>
         Login
       </Typography>
 
@@ -106,7 +109,10 @@ const LoginPage = () => {
           Signup Page
         </Typography>
       </Link>
-
+      
+      </Box>
+        </Paper>
+      </Grid>
       {/* Snackbar for Error or Success Messages */}
       <Snackbar
         open={openSnackbar}

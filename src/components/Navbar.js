@@ -18,10 +18,8 @@ function NavBar() {
     <AppBar position="static" sx={{ backgroundColor: '#007bff' }}>
       <Toolbar disableGutters>
         <Grid container justifyContent="space-between" alignItems="center">
-          {/* Left side: Logo and Login/Signup */}
           <Grid item xs={2} display="flex" alignItems="center">
             <IconButton size="large" color="inherit" aria-label="menu">
-              {/* Replace with your custom logo component */}
               <Typography variant="h6" component="div" sx={{ marginRight:5, color: 'white' }}>
                 Stockstalk
               </Typography>

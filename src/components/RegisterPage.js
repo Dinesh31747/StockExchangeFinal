@@ -33,7 +33,7 @@ function RegisterPage() {
           navigate("/"); // Redirect to homepage after 2 seconds
         }, 2000);
       } else {
-        // Handle unexpected responses from the backend (optional)
+        // Handle unexpected responses from the backend 
         console.warn("Unexpected response from backend:", response.data);
         setError("An unexpected error occurred. Please try again later.");
       }

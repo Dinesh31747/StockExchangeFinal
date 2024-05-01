@@ -55,7 +55,7 @@ function Homepage() {
             <Typography variant="body1" component="p">
               Keep up with the latest market trends and insights with our educational resources.
             </Typography>
-            <Link href="/stocks" underline="none">
+            <Link to="/stocks" underline="none">
               <Button variant="text">Explore Resources</Button>
             </Link>
           </Paper>
@@ -75,7 +75,7 @@ function Homepage() {
             <Typography variant="body1" component="p">
               Access powerful tools and analytics to help you make informed investment choices.
             </Typography>
-            <Link href="/trade" underline="none">
+            <Link to="/trade" underline="none">
               <Button variant="text">Explore Tools</Button>
             </Link>
           </Paper>

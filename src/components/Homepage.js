@@ -47,7 +47,7 @@ function Homepage() {
                     Learn More
                   </Button>
                   </Link>
-                  <Link href="/Register" underline="none">
+                  <Link href="/register" underline="none">
                     <Button variant="outlined">Sign Up</Button>
                   </Link>
                 </Box>
@@ -64,7 +64,7 @@ function Homepage() {
             <Typography variant="body1" component="p">
               Keep up with the latest market trends and insights with our educational resources.
             </Typography>
-            <Link href="/StockExchangeFinal" underline="none">
+            <Link href="/" underline="none">
               <Button variant="text"  onClick={handleExploreToolsClick}>Explore Resources</Button>
             </Link>
           </Paper>

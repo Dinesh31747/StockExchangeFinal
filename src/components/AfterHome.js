@@ -8,8 +8,8 @@ import {
   CardMedia,
   Box,
   Button,
-  Link,
 } from '@mui/material';
+import { Link } from 'react-router-dom';
 import NavAfter from './NavAfterLogin'; // Assuming you have a separate Navbar component
 import Player from 'react-player';
 
@@ -18,7 +18,7 @@ function Homepage() {
   const quote = "The stock market is a device for transferring money from the impatient to the patient. - Warren Buffett";
 
   return (
-    <div>
+    <React.Fragment>
       <NavAfter />
       <Grid container spacing={4}>
         <Grid item xs={20}>
@@ -81,7 +81,7 @@ function Homepage() {
           </Paper>
         </Grid>
       </Grid>
-    </div>
+    </React.Fragment>
   );
 }
 

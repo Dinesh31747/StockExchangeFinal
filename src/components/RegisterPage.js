@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 // Import MUI components
 import { Button, TextField, FormControlLabel, Checkbox, Grid, Typography, Box, Paper, Snackbar, Alert } from "@mui/material";
 import config from "../config";
-import Navbar from "./Navbar"
+import Navbar from "./Navbar";
 
 function RegisterPage() {
   const navigate = useNavigate();
@@ -19,34 +19,32 @@ function RegisterPage() {
 
     try {
       const response = await axios.post(`${config.url}/register`, {
-
-        
         email,
         password,
       });
 
-      if (response.data === "exist") {
-        setError("User already exists");
-      } else if (response.data === "success") {
+      if (response.data === "success") {
         // Successful registration
         setOpenSnackbar(true); // Open Snackbar for success message
         setTimeout(() => {
           navigate("/"); // Redirect to homepage after 2 seconds
         }, 2000);
+      } else if (response.data === "exist") {
+        setError("User already exists");
       } else {
-        // Handle unexpected responses from the backend 
+        // Handle unexpected responses from the backend
         console.warn("Unexpected response from backend:", response.data);
         setError("An unexpected error occurred. Please try again later.");
       }
     } catch (error) {
       console.error("Error:", error);
-      setError("Something went wrong. Please try again later."); // Provide a more generic error message for now
+      setError("An unexpected error occurred. Please try again later.");
     }
   };
 
   const handleSnackbarClose = (event, reason) => {
     if (reason === "clickaway") {
-      return;
+      return; // Prevent Snackbar closure on clickaway if desired
     }
     setOpenSnackbar(false);
   };
@@ -60,9 +58,9 @@ function RegisterPage() {
 
   return (
     <Grid container justifyContent="center" alignItems="center">
-      <Navbar/>
+      <Navbar />
       <Grid item xs={12} md={6}>
-        <Paper elevation={3} sx={{ p: 4, mt: 10}}>
+        <Paper elevation={3} sx={{ p: 4, mt: 10 }}>
           <Box sx={{ p: 4 }}>
             <Typography variant="h4" component="h1" align="center">
               Registration
@@ -90,10 +88,7 @@ function RegisterPage() {
                 fullWidth
                 margin="normal"
               />
-              <FormControlLabel
-                control={<Checkbox />}
-                label="Remember me"
-              />
+              <FormControlLabel control={<Checkbox />} label="Remember me" />
               <Button variant="contained" type="submit" color="primary" fullWidth>
                 Register
               </Button>

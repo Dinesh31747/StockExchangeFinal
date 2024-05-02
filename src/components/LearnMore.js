@@ -8,8 +8,8 @@ import {
   ListItemText,
   Button,
   Box,
-  Link,
 } from '@mui/material';
+import { Link } from 'react-router-dom';
 import NavBar from './Navbar'; // Assuming you have a separate Navbar component
 
 function LearnMore() {

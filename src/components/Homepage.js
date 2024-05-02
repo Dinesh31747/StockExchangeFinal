@@ -8,8 +8,8 @@ import {
   CardMedia,
   Box,
   Button,
-  Link,
 } from '@mui/material';
+import { Link } from 'react-router-dom';
 import NavBar from './Navbar'; // Assuming you have a separate Navbar component
 import Player from 'react-player';
 
@@ -17,12 +17,11 @@ function Homepage() {
   const videoUrl = 'https://youtu.be/kPmXyafzfaU'; // Replace with your video URL
   const quote = "The stock market is a device for transferring money from the impatient to the patient. - Warren Buffett";
   const handleExploreToolsClick = () => {
-    alert('Login To View'); // Display alert message
+    alert('Login To View'); // Display alert message (can be replaced with navigation logic)
   };
 
-
   return (
-    <div>
+    <React.Fragment>
       <NavBar />
       <Grid container spacing={4}>
         <Grid item xs={20}>
@@ -42,12 +41,12 @@ function Homepage() {
                   {quote}
                 </Typography>
                 <Box sx={{ display: 'flex', justifyContent: 'center', marginTop: 'auto' }}>
-                <Link href="/learnmore" underline="none">
-                  <Button variant="contained" sx={{ marginRight: 1 }}>
-                    Learn More
-                  </Button>
+                  <Link to="/learnmore" underline="none">
+                    <Button variant="contained" sx={{ marginRight: 1 }}>
+                      Learn More
+                    </Button>
                   </Link>
-                  <Link href="/register" underline="none">
+                  <Link to="/register" underline="none">
                     <Button variant="outlined">Sign Up</Button>
                   </Link>
                 </Box>
@@ -65,13 +64,14 @@ function Homepage() {
               Keep up with the latest market trends and insights with our educational resources.
             </Typography>
             <Link to="/" underline="none">
-              <Button variant="text"  onClick={handleExploreToolsClick}>Explore Resources</Button>
+              <Button variant="text" onClick={handleExploreToolsClick}>
+                Explore Resources
+              </Button>
             </Link>
           </Paper>
         </Grid>
         <Grid item xs={12} md={6}>
-          <Paper sx={{ padding: 2 }} 
-                style={{ height: 500 }}>
+          <Paper sx={{ padding: 2 }} style={{ height: 500 }}>
             <Typography variant="h5" component="div" sx={{ fontWeight: 'bold', marginBottom: 1 }}>
               Make Intelligent Decisions
             </Typography>
@@ -79,18 +79,19 @@ function Homepage() {
               style={{ width: '100%' }}
               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuC5VI9zGNfaStGgzGvJHFnG-w-RzA3s7fIg&usqp=CAU"
               alt="Stock Charts"
-              
             />
             <Typography variant="body1" component="p">
               Access powerful tools and analytics to help you make informed investment choices.
             </Typography>
             <Link to="/" underline="none">
-              <Button variant="text" onClick={handleExploreToolsClick}>Explore Tools</Button>
+              <Button variant="text" onClick={handleExploreToolsClick}>
+                Explore Tools
+              </Button>
             </Link>
           </Paper>
         </Grid>
       </Grid>
-    </div>
+    </React.Fragment>
   );
 }
 

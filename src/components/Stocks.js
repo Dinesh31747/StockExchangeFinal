@@ -78,7 +78,7 @@ const Stocks = () => {
   };
 
   return (
-    <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', backgroundColor: 'background.default' }}>
+    <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', backgroundColor: '#FFFFF4' }}>
       <AppBar position="static" color="primary">
         <NavAfter />
       </AppBar>

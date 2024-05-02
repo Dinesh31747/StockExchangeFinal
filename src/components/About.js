@@ -9,7 +9,7 @@ function About() {
 <>
 <NavAfter/>
 <div className="about-container">
-  <Grid container spacing={2}>
+  <Grid container spacing={2}style={{backgroundColor:'#FFFFF4'}}>
     <Grid item xs={12} md={6}>
       <div className="about-intro">
         <Typography variant="h1" component="h1" align="center">
@@ -20,7 +20,7 @@ function About() {
         </Typography>
       </div>
     </Grid>
-    <Grid item xs={12} md={6}>
+    <Grid item xs={12} md={6} style={{backgroundColor:'#FFFFF4'}}>
       <div className="about-mission">
         <Typography variant="h2" component="h2" align="center">
           Our Mission
